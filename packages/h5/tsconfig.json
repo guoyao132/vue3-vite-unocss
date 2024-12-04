@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["src/*", "components.d.ts"]
+    },
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts", // 包括所有 TypeScript 文件
+    "src/**/*.d.ts", // 包括所有类型定义文件
+    "src/**/*.tsx", // 包括所有 JSX 语法的 TypeScript 文件
+    "src/**/*.vue", // 包括所有 Vue 组件文件
+    "main/**/*", // 包括 main 目录下的所有文件
+    "src" // 包括 src 目录中的所有内容
+  ],
+  "exclude": ["node_modules", "dist"],
+  "importHelpers": true, // 通过引入 `tslib` 减少生成的代码量
+  "skipLibCheck": true // 跳过对库文件的类型检查，减少编译时间
+}

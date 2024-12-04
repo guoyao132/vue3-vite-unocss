@@ -1,0 +1,26 @@
+export const themeConfig = {
+  light: {
+    colorPrimary: '#00706b',
+    colorPrimaryBg: '#9fd4c8',
+    colorSuccess: '#5ec76f',
+    colorWarning: '#efb33f',
+    colorError: '#ec655f',
+    colorInfo: '#00706b',
+    backgroundColor: '#ffffff',
+    textColor: '#333333',
+    borderRadius: 4,
+    wireframe: true,
+  },
+  dark: {
+    colorPrimary: '#177ddc',
+    colorPrimaryBg: '#111b26',
+    colorSuccess: '#49aa19',
+    colorWarning: '#d89614',
+    colorError: '#a61d24',
+    colorInfo: '#177ddc',
+    backgroundColor: '#141414',
+    textColor: '#ffffff',
+    borderRadius: 4,
+    wireframe: true,
+  },
+}

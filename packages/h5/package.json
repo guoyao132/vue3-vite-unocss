@@ -1,0 +1,37 @@
+{
+  "name": "@web/h5",
+  "version": "1.0.0",
+  "private": true,
+  "author": "liuc",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build --mode igw",
+    "build-test": "vite build --mode test",
+    "clean": "rm -rf dist",
+    "start": "vite --base ./  --host",
+    "lint": "eslint --fix src",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vueuse/core": "^9.13.0",
+    "@web/common": "workspace:*",
+    "@web/components": "workspace:*",
+    "axios": "^1.7.4",
+    "dayjs": "^1.11.12",
+    "lint-staged": "^12.5.0",
+    "lodash": "^4.17.21",
+    "neverthrow": "^5.1.0",
+    "pinia": "^2.2.2",
+    "postcss-px-to-viewport": "^1.1.1",
+    "qs": "^6.13.0",
+    "swrv": "^1.0.4",
+    "terser": "^5.31.6",
+    "vant": "^4.9.4",
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
+  },
+  "devDependencies": {
+    "vite-plugin-html": "^3.2.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@web/components",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "scripts": {
+    "build": "echo 'skip common'"
+  },
+  "dependencies": {
+    "@web/common": "workspace:*",
+    "typescript": "^4.9.5",
+    "vue": "^3.4.38"
+  }
+}

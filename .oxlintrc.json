@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "files": {
+    "include": ["**/*.{js,jsx,ts,tsx,vue}"],
+    "ignore": ["**/node_modules/**", "**/dist/**", "**/.nuxt/**"]
+  },
+  "plugins": ["import", "unicorn"],
+  "env": {
+    "browser": true
+  },
+  "globals": {},
+  "settings": {},
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-unused-vars": "warn",
+    "no-undef": "error"
+  }
+}

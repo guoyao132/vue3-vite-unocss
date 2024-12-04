@@ -1,0 +1,27 @@
+stages:
+  - fe-deploy
+
+variables:
+  PROJECT_NAME: capital-construction-management
+
+fe-deploy:
+  stage: fe-deploy
+  image: lsage/pnpm-circleci-node:16.13.1-pnpm7.5.1
+  only:
+    - /release\/.+$/
+    - dev
+  script:
+    - sudo pnpm config set store-dir /share_pnpm_store
+    - sudo pnpm install
+    - pnpm run build-test:pc
+    - /bin/rm -rf /deploy_folder/${PROJECT_NAME}-pc
+    - sudo mkdir -p /deploy_folder/${PROJECT_NAME}-pc
+    - sudo chmod 777 /deploy_folder/${PROJECT_NAME}-pc
+    - /bin/mv packages/pc/dist/** /deploy_folder/${PROJECT_NAME}-pc
+    - pnpm run build-test:h5
+    - /bin/rm -rf /deploy_folder/${PROJECT_NAME}-h5
+    - sudo mkdir -p /deploy_folder/${PROJECT_NAME}-h5
+    - sudo chmod 777 /deploy_folder/${PROJECT_NAME}-h5
+    - /bin/mv packages/h5/dist/** /deploy_folder/${PROJECT_NAME}-h5
+  tags:
+    - share-fe-package-runner
